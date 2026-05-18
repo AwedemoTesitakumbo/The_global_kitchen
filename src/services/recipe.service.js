@@ -1,4 +1,4 @@
-const Recipe = require("../models/recipeModel");
+import Recipe from "../modules/recipe.model.js";
 
 const getAllRecipes = async (category) => {
   const filter = category ? { category } : {};
@@ -24,7 +24,7 @@ const deleteRecipe = async (id) => {
   return await Recipe.findByIdAndDelete(id);
 };
 
-module.exports = {
+export {
   getAllRecipes,
   createRecipe,
   updateRecipe,

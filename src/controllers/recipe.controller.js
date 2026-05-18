@@ -1,4 +1,4 @@
-const recipeService = require("../services/recipeService");
+import * as recipeService from "../services/recipe.service.js";
 
 const getRecipes = async (req, res, next) => {
   try {
@@ -59,7 +59,7 @@ const deleteRecipe = async (req, res, next) => {
   }
 };
 
-module.exports = {
+export {
   getRecipes,
   createRecipe,
   updateRecipe,
